@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">home</a>
+      <a href="about.html">about me</a>
+      <a href="products.html">products</a>
+    </nav>
+
+    <main class="home">
+      <section class="intro">
+        <img src="img/aboutme.PNG" alt="photo of siya" />
+        <a href="about.html">about me</a>
+      </section>
+
+      <section class="model">
+        <div class="box">
+          <p class="box-title">&#10022; Siya &#10022;</p>
+          <p class="box-subtitle">shoe collection</p>
+          <div class="window">
+            <div class="slides">
+              <div class="slide" id="look1">
+                <img src="img/shoe1Model.JPG" alt="siya wearing shoe 1" />
+                <a href="shoe1.html">learn about these shoes</a>
+              </div>
+              <div class="slide" id="look2">
+                <img src="img/shoe2Model.JPG" alt="siya wearing shoe 2" />
+                <a href="shoe2.html">learn about these shoes</a>
+              </div>
+              <div class="slide" id="look3">
+                <img src="img/shoe3Model.JPG" alt="siya wearing shoe 3" />
+                <a href="shoe3.html">learn about these shoes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closet">
+        <button onclick="showLook(1)">
+          <img src="img/shoe1.png" alt="shoe 1" />
+        </button>
+        <button onclick="showLook(2)">
+          <img src="img/shoe2.png" alt="shoe 2" />
+        </button>
+        <button onclick="showLook(3)">
+          <img src="img/shoe3.png" alt="shoe 3" />
+        </button>
+      </section>
+    </main>
+
+    <script>
+      function showLook(number) {
+        document.getElementById("look" + number).scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      }
+    </script>
+  </body>
+</html>
