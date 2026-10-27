@@ -15,8 +15,9 @@ h2 {
 
 nav {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 30px;
 }
 
 nav a {
@@ -25,17 +26,39 @@ nav a {
   background-color: #ff2e93;
   color: white;
   text-decoration: none;
-  padding: 12px 0;
-  width: 250px;
+  padding: 12px 30px;
   text-align: center;
   border: 3px solid white;
   border-radius: 30px;
   box-shadow: 4px 4px 0 #9b5cff;
+  transition: background-color 0.2s;
+}
+
+nav a:nth-child(1) {
+  font-size: 30px;
+  padding: 10px 44px;
+  transform: rotate(-4deg);
+}
+
+nav a:nth-child(2) {
+  background-color: #9b5cff;
+  box-shadow: 4px 4px 0 #ff2e93;
+  margin-top: 18px;
+  transform: rotate(3deg);
+}
+
+nav a:nth-child(3) {
+  background-color: #00c8ff;
+  box-shadow: 4px 4px 0 #c6ff3d;
+  margin-left: auto;
+  margin-top: 6px;
+  transform: rotate(-2deg);
 }
 
 nav a:hover {
   background-color: #c6ff3d;
   color: #3a0a4a;
+  transform: rotate(0deg) scale(1.08);
 }
 
 .home {
@@ -137,6 +160,7 @@ nav a:hover {
 }
 
 .slide {
+  position: relative;
   min-width: 320px;
   scroll-snap-align: start;
 }
@@ -149,20 +173,42 @@ nav a:hover {
 }
 
 .slide a {
-  display: block;
-  margin: 14px 24px 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  padding: 12px 28px;
   font-family: "Chewy", cursive;
   font-size: 20px;
   background-color: #c6ff3d;
   color: #3a0a4a;
   text-decoration: none;
-  padding: 12px 0;
   border: 3px solid white;
   border-radius: 30px;
 }
 
+/* a different button color for each shoe */
+#look1 a {
+  background-color: #ff2e93;
+  color: white;
+  box-shadow: 4px 4px 0 #9b5cff;
+}
+
+#look2 a {
+  background-color: #c6ff3d;
+  color: #3a0a4a;
+  box-shadow: 4px 4px 0 #ff2e93;
+}
+
+#look3 a {
+  background-color: #9b5cff;
+  color: white;
+  box-shadow: 4px 4px 0 #00c8ff;
+}
+
 .slide a:hover {
-  background-color: #00c8ff;
+  transform: translate(-50%, -50%) scale(1.08);
 }
 
 .closet {
@@ -180,7 +226,7 @@ nav a:hover {
   border: 4px solid #00c8ff;
   border-radius: 20px;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: background-color 0.2s;
 }
 
 .closet button:nth-child(1) {
@@ -196,7 +242,7 @@ nav a:hover {
 }
 
 .closet button:hover {
-  transform: scale(1.08) rotate(-3deg);
+  background-color: #c6ff3d;
 }
 
 .closet img {
